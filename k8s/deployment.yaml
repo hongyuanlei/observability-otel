@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: otel
-          image: otel/opentelemetry-collector-contrib:latest
+          image: docker.io/otel/opentelemetry-collector-contrib:0.128.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 54527
