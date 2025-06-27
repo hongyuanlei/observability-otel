@@ -1,0 +1,11 @@
+---
+apiVersion: v2
+name: opentelemetry-operator
+description: A custom opentelemetry stack chart
+type: application
+version: 0.1.0
+appVersion: "0.126.0"
+dependencies:
+  - name: opentelemetry-operator
+    version: 0.90.3
+    repository: "https://open-telemetry.github.io/opentelemetry-helm-charts"
