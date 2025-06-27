@@ -57,9 +57,6 @@ spec:
     service:
       extensions:
       - health_check
-      telemetry:
-        metrics:
-          address: 127.0.0.1:12345
       pipelines:
         metrics/otlp:
           receivers:
