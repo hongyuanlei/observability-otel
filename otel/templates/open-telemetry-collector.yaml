@@ -46,6 +46,8 @@ spec:
         verbosity: normal
       otlphttp/logs:
         endpoint: http://loki-gateway.observability/otlp
+     otlphttp/trace:
+        endpoint: http://tempo-gateway.observability/otlp/v1/traces
       prometheusremotewrite:
         endpoint: http://mimir-nginx.observability/api/v1/push
         tls:
@@ -76,3 +78,9 @@ spec:
           exporters:
             - debug
             - otlphttp/logs
+        traces/oltp:
+          receivers:
+          - otlp
+          exporters:
+          - debug
+          - otlphttp/trace
