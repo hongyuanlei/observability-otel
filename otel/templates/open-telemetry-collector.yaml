@@ -6,6 +6,7 @@ metadata:
 spec:
   mode: deployment  # also supports daemonset or sidecar
   image: otel/opentelemetry-collector-contrib:0.128.0
+  replicas: 2
   config: |
     receivers:
       otlp:
